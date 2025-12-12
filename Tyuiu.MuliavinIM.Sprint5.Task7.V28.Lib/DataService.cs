@@ -1,5 +1,4 @@
-﻿using System.Text.RegularExpressions;
-using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.MuliavinIM.Sprint5.Task7.V28.Lib
 {
     public class DataService : ISprint5Task7V28
