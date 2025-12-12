@@ -6,12 +6,12 @@ namespace Tyuiu.MuliavinIM.Sprint5.Task7.V28.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            string pathsavefile = Path.Combine(Path.GetTempPath(), "InPutDataFileTask7V28.txt");
-            FileInfo fileInfo = new FileInfo(pathsavefile);
+            string pathSaveFile = Path.Combine("C:", "DataSprint5", "OutPutDataFileTask7V28.txt");
+            FileInfo fileInfo = new FileInfo(pathSaveFile);
             bool fileExists = fileInfo.Exists;
             if (fileExists)
             {
-                File.Delete(pathsavefile);
+                File.Delete(pathSaveFile);
             }
             string strline = "";
             using (StreamReader reader = new StreamReader(path))
@@ -31,10 +31,10 @@ namespace Tyuiu.MuliavinIM.Sprint5.Task7.V28.Lib
                         }
 
                     }
-                    File.AppendAllText(pathsavefile, strline + Environment.NewLine);
+                    File.AppendAllText(pathSaveFile, strline + Environment.NewLine);
                 }
             }
-            return pathsavefile;
+            return pathSaveFile;
 
         }
     }
